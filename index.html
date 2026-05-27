@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serge Cohen-Uzan — Photographe Professionnel à Paris</title>
+  <meta name="description" content="Photographe professionnel à Paris. Spécialiste mode, portrait, reportage corporate, hôtellerie et lingerie.">
+  <meta name="keywords" content="photographe paris, photographe mode, photographe portrait, photographe corporate, serge cohen-uzan">
+  <link rel="stylesheet" href="assets/css/modern.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" onclick="showHome(); return false;">Serge Cohen-Uzan</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" onclick="showGallery('mode'); return false;">Mode</a></li>
+        <li><a href="#" onclick="showGallery('portraits'); return false;">Portraits</a></li>
+        <li><a href="#" onclick="showGallery('reportages'); return false;">Reportages</a></li>
+        <li><a href="#" onclick="showGallery('hotellerie'); return false;">Hôtellerie</a></li>
+        <li><a href="#" onclick="showGallery('lingerie'); return false;">Lingerie</a></li>
+        <li><a href="#" onclick="showGallery('gastronomie'); return false;">Gastronomie</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HOME VIEW
+  ═══════════════════════════════════════ -->
+  <div id="homeView">
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-slides">
+        <div class="hero-slide active"
+             style="background-image: url('photos/mode/photo(1).jpg')"></div>
+        <div class="hero-slide"
+             style="background-image: url('photos/portraits/1M5A2529a%20copie.jpg')"></div>
+        <div class="hero-slide"
+             style="background-image: url('photos/hotellerie/sukhothai-bkk/SUKHOTHAI%20BKK%20(1).jpg')"></div>
+        <div class="hero-slide"
+             style="background-image: url('photos/lingerie/maison-close/photodemodeparis.com%20(64).jpg')"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Photographe professionnel à Paris</p>
+        <h1 class="hero-name">Serge Cohen-Uzan</h1>
+        <p class="hero-tagline">Mode &nbsp;·&nbsp; Portrait &nbsp;·&nbsp; Reportage &nbsp;·&nbsp; Hôtellerie</p>
+        <a href="#portfolio" class="hero-cta">Découvrir le portfolio</a>
+      </div>
+
+      <div class="hero-scroll" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+        <span></span>
+      </div>
+
+      <div class="hero-dots">
+        <div class="hero-dot active"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO CATEGORIES -->
+    <section id="portfolio">
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item"
+             onclick="showGallery('mode')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Mode">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/mode/photo(1).jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Mode</h2>
+            <p>Collections · Défilés · Catalogues</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             onclick="showGallery('portraits')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Portraits">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/portraits/1M5A2529a%20copie.jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Portraits</h2>
+            <p>Institutionnels · Artistiques · Book</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             onclick="showGallery('reportages')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Reportages">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/reportages/graphic-pros/cohen-uzan%20archi%20(25)001.jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Reportages</h2>
+            <p>Corporate · Événementiel · Presse</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             onclick="showGallery('hotellerie')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Hôtellerie">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/hotellerie/sukhothai-bkk/SUKHOTHAI%20BKK%20(1).jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Hôtellerie &amp; Voyages</h2>
+            <p>Hôtels de luxe · Tourisme · Destinations</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             onclick="showGallery('lingerie')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Lingerie">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/lingerie/maison-close/photodemodeparis.com%20(64).jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Lingerie</h2>
+            <p>Défilés · Catalogues · Shooting</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             onclick="showGallery('gastronomie')"
+             role="button" tabindex="0"
+             aria-label="Ouvrir la galerie Gastronomie">
+          <div class="portfolio-bg"
+               style="background-image: url('photos/gastronomie/paris-septanil/CASSITA.jpg')"></div>
+          <div class="portfolio-shade"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-arrow">→</div>
+            <h2>Gastronomie</h2>
+            <p>Restaurants · Art de vivre</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-inner">
+        <div class="about-text">
+          <p class="about-label">À propos</p>
+          <h2>Serge Cohen-Uzan</h2>
+          <p>Photographe créatif basé à Paris, Serge Cohen-Uzan développe depuis plus de deux décennies une œuvre photographique d'exception. Spécialisé dans la mode, le portrait et le reportage institutionnel, il collabore avec les plus grandes maisons de couture, agences de communication et publications internationales.</p>
+          <p>Ses photographies de mode et de lingerie ont été publiées dans de nombreux magazines et catalogues. Directeur de la photographie pour Madagascar Magazine, son regard parcourt l'Europe, l'Asie, le Moyen-Orient et l'Afrique avec la même précision et la même sensibilité artistique.</p>
+          <p>Son approche subtile du portrait révèle l'essence de chaque sujet avec une lumière maîtrisée et un sens aigu de la composition.</p>
+          <div class="about-specialites">
+            <span>Mode &amp; Fashion</span>
+            <span>Portrait Institutionnel</span>
+            <span>Reportage Corporate</span>
+            <span>Hôtellerie &amp; Tourisme</span>
+            <span>Lingerie</span>
+            <span>Gastronomie</span>
+          </div>
+        </div>
+        <div class="about-image-wrap">
+          <img src="photos/portraits/1M5A2529a%20copie.jpg"
+               alt="Portrait photographié par Serge Cohen-Uzan">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-inner">
+        <p class="contact-label">Contact</p>
+        <h2>Travaillons ensemble</h2>
+        <p class="contact-sub">Pour toute demande de collaboration, devis ou information</p>
+        <div class="contact-items">
+          <a href="mailto:contact@sergecohenuzan.com" class="contact-item">
+            <span class="contact-icon">✉</span>
+            contact@sergecohenuzan.com
+          </a>
+          <a href="http://www.sergecohenuzan.com" class="contact-item" target="_blank" rel="noopener">
+            <span class="contact-icon">◎</span>
+            www.sergecohenuzan.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-name">Serge Cohen-Uzan</span>
+      <span class="footer-copy">© 2024 — Photographe professionnel à Paris</span>
+    </footer>
+
+  </div><!-- /homeView -->
+
+  <!-- ═══════════════════════════════════════
+       GALLERY VIEW
+  ═══════════════════════════════════════ -->
+  <div id="galleryView">
+
+    <div class="gallery-header">
+      <button class="back-btn" onclick="showHome()">Retour au portfolio</button>
+      <h1 id="galleryTitle"></h1>
+      <div class="gallery-divider"></div>
+      <p class="gallery-header-sub" id="gallerySubtitle"></p>
+      <p class="gallery-count" id="galleryCount"></p>
+    </div>
+
+    <div id="galleryGrid" class="gallery-grid"></div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       LIGHTBOX
+  ═══════════════════════════════════════ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse de photos">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Fermer">✕</button>
+    <button class="lb-nav lb-prev" onclick="prevPhoto()" aria-label="Photo précédente">‹</button>
+    <button class="lb-nav lb-next" onclick="nextPhoto()" aria-label="Photo suivante">›</button>
+
+    <div class="lb-image-wrap">
+      <img id="lbImg" src="" alt="Photo agrandie">
+    </div>
+
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+
+  <script src="assets/js/modern.js"></script>
+
+</body>
+</html>
