@@ -1,0 +1,13 @@
+[build]
+  # Commande : build Vue + copie des assets statiques dans dist/
+  command = "npm run build && cp -r photos dist/photos && cp son.mp3 dist/son.mp3 && cp -r admin dist/admin && cp content.json dist/content.json"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Redirect SPA : toutes les routes → index.html (obligatoire pour Vue Router)
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
