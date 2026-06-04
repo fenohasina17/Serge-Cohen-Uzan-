@@ -225,11 +225,39 @@ button {
   text-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
+.hero-profession {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 3.8rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 24px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.hero-location {
+  font-size: clamp(0.9rem, 1.6vw, 1.3rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+  font-weight: 300;
+  font-family: var(--sans);
+}
+
+.hero-rule {
+  width: 56px;
+  height: 1px;
+  background: rgba(255,255,255,0.28);
+  margin: 0 auto 24px;
+}
+
 .hero-tagline {
-  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  font-size: clamp(0.65rem, 1.1vw, 0.8rem);
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 52px;
   font-weight: 300;
 }
@@ -446,7 +474,27 @@ button {
   font-weight: 300;
   letter-spacing: 0.04em;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+}
+
+.about-profession {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2.8rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-location {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
 }
 
 .about-text p {
@@ -565,6 +613,14 @@ button {
   opacity: 0.7;
 }
 
+.contact-cities {
+  margin-top: 48px;
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -612,24 +668,29 @@ footer {
 }
 
 .back-btn {
-  color: var(--grey);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  color: var(--white);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 0;
-  margin-bottom: 32px;
+  padding: 12px 28px;
+  margin-bottom: 48px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  transition: color 0.2s;
+  gap: 12px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-weight: 400;
 }
 
 .back-btn::before {
   content: '←';
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-.back-btn:hover { color: var(--white); }
+.back-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 .gallery-header h1 {
   font-family: var(--serif);
@@ -873,4 +934,232 @@ footer {
 
   .lb-nav { padding: 16px; font-size: 2.2rem; }
   .lb-image-wrap { max-width: calc(100vw - 80px); }
+}
+
+/* ============================================
+   CITIES BACKGROUND (section About)
+   ============================================ */
+
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+.cities-bg {
+  position: absolute;
+  inset: 0;
+  padding: 60px 48px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.038);
+  line-height: 2.2;
+  word-spacing: 0.8em;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 400;
+  font-family: var(--sans);
+  z-index: 0;
+}
+
+.about-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer signature */
+.footer-signature {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+/* ============================================
+   INTRO OVERLAY
+   ============================================ */
+
+#introOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9500;
+  background: #030303;
+  overflow: hidden;
+  pointer-events: all;
+}
+
+#introOverlay.hiding {
+  animation: introFadeOut 1s var(--ease) forwards;
+  pointer-events: none;
+}
+
+@keyframes introFadeOut {
+  to { opacity: 0; }
+}
+
+/* Individual scattered photos */
+.intro-photo {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 12px 60px rgba(0,0,0,0.85), 0 4px 20px rgba(0,0,0,0.6);
+  opacity: 0;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82) contrast(1.05);
+}
+
+@keyframes photoFlashIn {
+  0%   { opacity: 0; transform: scale(0.4) rotate(var(--rot)); filter: brightness(6); }
+  20%  { opacity: 1; filter: brightness(2); }
+  60%  { transform: scale(1.04) rotate(var(--rot)); }
+  100% { opacity: 1; transform: scale(1) rotate(var(--rot)); filter: brightness(1); }
+}
+
+.intro-photo.visible {
+  animation: photoFlashIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Dark vignette to keep center readable */
+#introOverlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 55% 55% at 50% 50%,
+    rgba(3,3,3,0.75) 0%,
+    transparent 100%
+  );
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Center text */
+.intro-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  text-align: center;
+  padding: 0 24px;
+  animation: introCenterIn 0.9s ease 1.3s forwards;
+}
+
+@keyframes introCenterIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.intro-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.intro-name {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 7vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  text-shadow: 0 0 60px rgba(0,0,0,1), 0 2px 40px rgba(0,0,0,0.9);
+  margin-bottom: 52px;
+  line-height: 1;
+}
+
+.intro-enter {
+  display: inline-block;
+  padding: 16px 60px;
+  border: 1px solid var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.intro-enter:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--black);
+}
+
+.intro-skip {
+  position: absolute;
+  bottom: 28px;
+  right: 36px;
+  color: rgba(255,255,255,0.25);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.intro-skip:hover { color: rgba(255,255,255,0.6); }
+
+/* ============================================
+   MUSIC TOGGLE BUTTON
+   ============================================ */
+
+.music-toggle {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 800;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(8,8,8,0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.4);
+  font-size: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: var(--sans);
+}
+
+.music-toggle.visible { display: flex; }
+
+.music-toggle.playing {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.music-toggle:hover {
+  color: var(--white);
+  border-color: var(--grey);
+}
+
+@media (max-width: 480px) {
+  .intro-name { font-size: 2rem; }
+  .intro-enter { padding: 14px 40px; }
+  .intro-skip { bottom: 16px; right: 20px; }
 }

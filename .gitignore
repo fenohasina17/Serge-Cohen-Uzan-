@@ -1,0 +1,33 @@
+# Dépendances
+node_modules/
+
+# Build Vite
+dist/
+
+# Système
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE / Éditeurs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Claude Code
+.claude/
+
+# Uploads générés (photos téléversées via l'admin)
+photos/uploads/
