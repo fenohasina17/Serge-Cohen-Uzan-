@@ -164,6 +164,96 @@
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Serge Cohen-Uzan" />
 
+  <!-- Données structurées JSON-LD — lues directement par Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://sergecohenuzan.netlify.app/#serge",
+        "name": "Serge Cohen-Uzan",
+        "jobTitle": "Photographe Créateur Professionnel",
+        "url": "https://sergecohenuzan.netlify.app",
+        "email": "contact@sergecohenuzan.com",
+        "telephone": "+33675536728",
+        "image": "https://sergecohenuzan.netlify.app/photos/mode/photo(1).jpg",
+        "description": "Photographe Créateur Professionnel basé à Paris et Tana (Madagascar). Spécialiste Fashion, Beauty, Advertising, Fine Art, Portraits, Hôtellerie & Tourisme. Reportages en France et dans le monde entier.",
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Photographe professionnel",
+          "occupationLocation": { "@type": "City", "name": "Paris" },
+          "skills": "Fashion, Beauty, Advertising, Fine Art, Portraits, Lingerie, Hôtellerie, Tourisme, Corporate, Reportage, Studio"
+        },
+        "workLocation": [
+          { "@type": "Place", "name": "Paris, France" },
+          { "@type": "Place", "name": "Antananarivo, Madagascar" },
+          { "@type": "Place", "name": "New York, USA" },
+          { "@type": "Place", "name": "Hong Kong" },
+          { "@type": "Place", "name": "Kuala Lumpur, Malaisie" },
+          { "@type": "Place", "name": "Bangkok, Thaïlande" },
+          { "@type": "Place", "name": "Marrakech, Maroc" }
+        ],
+        "knowsAbout": [
+          "Fashion Photography", "Beauty Photography", "Advertising Photography",
+          "Fine Art Photography", "Portrait Photography", "Lingerie Photography",
+          "Hotel Photography", "Travel Photography", "Corporate Photography",
+          "Makeup Artiste Photography", "Catalogue Photography", "Book Modèle"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/sergecohenuzan",
+          "https://www.sergecohenuzan.com"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://sergecohenuzan.netlify.app/#studio",
+        "name": "Serge Cohen-Uzan — Photographe Créateur",
+        "url": "https://sergecohenuzan.netlify.app",
+        "email": "contact@sergecohenuzan.com",
+        "telephone": "+33675536728",
+        "founder": { "@id": "https://sergecohenuzan.netlify.app/#serge" },
+        "description": "Studio photo professionnel. Fashion, Beauty, Advertising, Fine Art, Portraits & People, Fashion Modèles, Hôtels & Tourisme. Paris — Tous déplacements France et monde.",
+        "areaServed": [
+          "Paris", "Île-de-France", "France", "International"
+        ],
+        "priceRange": "Sur devis",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Prestations photographiques",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photographie Fashion & Mode" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photographie Beauty" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photographie Advertising & Publicité" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fine Art Photography" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portraits & People" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fashion Modèles & Lingerie" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hôtels & Tourisme" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Makeup Artistes" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reportage Corporate & Événementiel" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Studio Photo Mobile" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Book Modèle & Look Book" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Catalogues Mode & Packshot" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sergecohenuzan.netlify.app/#site",
+        "name": "Serge Cohen-Uzan Photographe",
+        "url": "https://sergecohenuzan.netlify.app",
+        "description": "Portfolio officiel de Serge Cohen-Uzan, Photographe Créateur Professionnel. Paris / Tana.",
+        "inLanguage": "fr-FR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://sergecohenuzan.netlify.app/galerie/{category}",
+          "query-input": "required name=category"
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
