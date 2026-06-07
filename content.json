@@ -1,7 +1,7 @@
 {
   "hero_profession": "Photographe · Créateur · Professionnel",
   "hero_location": "Paris / Tana",
-  "hero_tagline": "Mode · Portrait · Reportage · Hôtellerie",
+  "hero_tagline": "Fashion · Beauty · Advertising · Fine Art · Tourisme",
   "about_bio_1": "Photographe de réputation internationale, Serge Cohen-Uzan développe depuis plus de deux décennies une œuvre photographique d'exception. Entre Paris, New York, Hong Kong, Kuala Lumpur et Madagascar, son objectif capture avec la même intensité les visages, les lieux et les instants qui font l'histoire.",
   "about_bio_2": "Spécialisé dans la mode, le portrait et le reportage institutionnel, il collabore avec les plus grandes maisons de couture, agences de communication et publications internationales. Ses photographies de mode et de lingerie ont été publiées dans de nombreux magazines et catalogues à travers le monde.",
   "about_bio_3": "Directeur de la photographie pour Madagascar Magazine, son approche subtile du portrait révèle l'essence de chaque sujet avec une lumière maîtrisée et un sens aigu de la composition.",
@@ -10,10 +10,13 @@
   "contact_instagram": "@sergecohenuzan",
   "contact_website": "www.sergecohenuzan.com",
   "about_portrait": "",
-  "cover_mode": "photos/mode/photo(1).jpg",
-  "cover_portraits": "photos/portraits/1M5A2529a copie.jpg",
-  "cover_reportages": "photos/reportages/graphic-pros/cohen-uzan archi (25)001.jpg",
-  "cover_hotellerie": "photos/hotellerie/sukhothai-bkk/SUKHOTHAI BKK (1).jpg",
-  "cover_lingerie": "photos/lingerie/maison-close/photodemodeparis.com (64).jpg",
-  "cover_gastronomie": "photos/gastronomie/paris-septanil/CASSITA.jpg"
+  "cover_pressbook":       "photos/mode/photo(37).jpg",
+  "cover_fashion":         "photos/mode/photo(1).jpg",
+  "cover_makeup-artistes": "photos/portraits/1M5A4179a copie.jpg",
+  "cover_beauty":          "photos/portraits/1M5A2529a copie.jpg",
+  "cover_advertising":     "photos/reportages/graphic-pros/cohen-uzan archi (25)001.jpg",
+  "cover_fine-art":        "photos/mode/photo(195).jpg",
+  "cover_portraits-people":"photos/portraits/1M5A3700a.jpg",
+  "cover_fashion-modeles": "photos/lingerie/maison-close/photodemodeparis.com (64).jpg",
+  "cover_hotels-tourisme": "photos/hotellerie/sukhothai-bkk/SUKHOTHAI BKK (1).jpg"
 }
